@@ -440,13 +440,9 @@ def main():
     app.job_queue.run_monthly(send_monthly_report, when=monthly_time, day=1)
 
     logger.info("✅ Бот запущен и слушает...")
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=8000,
-        url_path=TOKEN,
-        webhook_url=f"https://{your_app_name}.onrender.com/{TOKEN}"
-    )
+    app.run_polling()
 
 if __name__ == "__main__":
     main()
+
 
