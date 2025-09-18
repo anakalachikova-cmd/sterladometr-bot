@@ -1,2 +1,3 @@
-python-telegram-bot[job-queue]
+python-telegram-bot[job-queue]==21.*
 pytz
+Flask
